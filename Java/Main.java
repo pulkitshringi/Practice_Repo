@@ -1,10 +1,23 @@
-class Main{
-    public static void main(String[] args){
-      String str1 = "pooki";
-      int[] arr = {12,24};
-      Integer n = 12;
-      System.out.println(str1.getClass().getName());
-      System.out.println(arr.getClass().getName());
-      System.out.println(n.getClass().getName());
+// Superclass
+class Animal {
+    // Method to be overridden
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+// Subclass
+class Dog extends Animal {
+    // Overriding the sound method in the Dog class
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an instance of the subclass
+        Dog dog = new Dog();
+        dog.sound();  // This will call the overridden method in the Dog class
     }
 }
