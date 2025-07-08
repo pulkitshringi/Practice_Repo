@@ -1,23 +1,30 @@
-// Superclass
-class Animal {
-    // Method to be overridden
-    void sound() {
-        System.out.println("Animal makes a sound");
-    }
-}
 
-// Subclass
-class Dog extends Animal {
-    // Overriding the sound method in the Dog class
-    void sound() {
-        System.out.println("Dog barks");
-    }
-}
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        // Creating an instance of the subclass
-        Dog dog = new Dog();
-        dog.sound();  // This will call the overridden method in the Dog class
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter n : ");
+        n = sc.nextInt();
+        Pattern p = new Pattern();
+        p.pattern17(n);
+    }
+}
+ class Pattern{
+    public void pattern17(int n) {
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            char ch = 'A';
+            int size = i*2-1;
+            for(int j=1;j<=size;j++){
+                System.out.print(ch);
+                if(j<=size/2) ch++;
+                else ch--;
+            }
+            System.out.println();
+        }
     }
 }
