@@ -1,11 +1,16 @@
-import java.util.Scanner;
+import java.util.*;
 class Main{
-        public static void main(String[] args){
-            Scanner sc = new Scanner(System.in);
-            int n = sc.nextInt();
-            while(n>0){
-                System.out.println("I love miti <3");
-                n--;
-            }
+    public static void main(String[] args) {
+        HashSet<Integer> hset = new HashSet<>();
+        hset.add(23);
+        hset.add(69);
+        hset.add(43);
+        hset.add(23);
+        hset.add(69);
+        System.out.println(hset);
+        Iterator<Integer> it = hset.iterator();
+        while(it.hasNext()){
+            System.out.print(it.next() + " ");
+        }
     }
 }
