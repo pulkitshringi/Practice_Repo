@@ -1,21 +1,16 @@
-class Solution {    
-    public String largeOddNum(String s) {
-        //your code goes here
-        int j = 0;
-        while(s.charAt(j)=='0' && j<s.length()){
-            j++;
-        }
 
-        for(int i=s.length();i>j;i--){
-            if(Integer.parseInt(s.substring(j,i))%2==1) return s.substring(j,i);
-        }
-        return "0";
-    }
-}
+import java.io.*;
 
+// other way of taking input using input stream.
 class Main{
-    public static void main(String[] args){
-    //    Solution s1 = new Solution();
-    //    System.out.println(s1.largeOddNum("00005"));
+    public static void main(String[] args) throws IOException {
+        InputStreamReader io = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(io);
+        int no= Integer.parseInt(br.readLine());
+        float no2=Float.parseFloat(br.readLine());
+        char no3=br.readLine().charAt(0);
+        System.out.println(no);
+        System.out.println(no2);
+        System.out.println(no3);
     }
 }
