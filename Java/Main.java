@@ -3,8 +3,7 @@ import java.util.*;
 class Main{
   public static void main(String[] args) {
             Solution s1 = new Solution();
-            int[] nums = {12,33,44,56,43,33,55,55,55};
-            System.out.println(s1.mostFrequentElement(nums));
+            System.out.println(s1.mostFrequentElement(new int[]{12,33,44,56,43,33,55,55,55}));
   }}
 
 class Solution {
